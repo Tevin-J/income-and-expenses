@@ -2,7 +2,7 @@
 
 
 let number=5;
-let string="Hello!"
+let string="Hello world!"
 let boolean=true;
 console.log(number);
 console.log(string);
