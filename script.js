@@ -1,23 +1,28 @@
 "use strict";
 
+let money = prompt("Ваш бюджет на месяц", "");
+let time = prompt("Введите дату в формате YYY-MM-DD", "");
 
-let number=5;
-let string="Hello world!"
-let boolean=true;
-console.log(number);
-console.log(string);
-console.log(boolean);
+let appData = {
+    budget: money,
+    timeData: time,
+    expences: {},
+    optionalExpences: {},
+    income: [],
+    savings: false
+};
 
-let person = {
-    name: "Joe",
-    age: 29,
-    isMarried: false,
-}
+let expencesName1 = prompt("Введите обязательную статью расходов в этом месяце",
+ "");
+let expencesValue1 = prompt("Во сколько Вам это обойдется?","");
+let expencesName2 = prompt("Введите обязательную статью расходов в этом месяце",
+ "");
+let expencesValue2 = prompt("Во сколько Вам это обойдется?","");
 
-console.log(person.isMarried);
+appData.expences[expencesName1] = expencesValue1;
+appData.expences[expencesName2] = expencesValue2;
 
-//alert ("Hello"); 
-/*let answer=confirm ("are you here?");
-console.log (answer);*/
-let answer2=prompt("are you 18?","yes");
-console.log (typeof(answer2));
+alert(appData.budget/30);
+
+console.log(appData);
+
